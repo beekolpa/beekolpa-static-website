@@ -18,19 +18,19 @@
               alt="Beekolpo Logo"
             />
           </div>
-            <!-- Mobile Menu Toggle -->
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+          <!-- Mobile Menu Toggle -->
+          <button class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -249,8 +249,8 @@
             <p>
               As a digital marketplace, Beekolpo empowers users to discover,
               book, and pay for a wide range of services from home repairs and
-              beauty care to cleaning and more all in one place. Our mission
-              is to enhance daily life through innovation, trust, and seamless
+              beauty care to cleaning and more all in one place. Our mission is
+              to enhance daily life through innovation, trust, and seamless
               technology.
             </p>
 
@@ -286,7 +286,7 @@
         <div class="faq-grid">
           <div class="faq-item">
             <button class="faq-button">
-              <span>Is Beekolpo free to use?</span>
+              <span>What services can I find on the app?</span>
               <svg
                 class="faq-icon"
                 width="20"
@@ -306,17 +306,17 @@
             </button>
             <div class="faq-answer">
               <p>
-                Yes! Beekolpo is completely free to download and use. We offer a
-                free tier with all essential editing features. Our premium
-                subscription is optional and unlocks additional filters and
-                advanced tools.
+                Our app connects customers with trusted service providers across
+                Bangladesh. You can find services like home repair, garage work,
+                cleaning, beauty services, and many more, all bookable online
+                easily.
               </p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-button">
-              <span>What Android version do I need?</span>
+              <span>Can providers sell products as well as services?</span>
               <svg
                 class="faq-icon"
                 width="20"
@@ -336,16 +336,16 @@
             </button>
             <div class="faq-answer">
               <p>
-                Beekolpo requires Android 8.0 or later. The app is optimized to
-                run smoothly on all modern Android devices, from budget to
-                premium smartphones.
+                Yes! Providers can post products for sale, as well as offer
+                their services. Our platform makes it easy for sellers to list
+                items and for customers to purchase or hire services seamlessly.
               </p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-button">
-              <span>How much storage space does it need?</span>
+              <span>Is the app available throughout Bangladesh?</span>
               <svg
                 class="faq-icon"
                 width="20"
@@ -365,16 +365,16 @@
             </button>
             <div class="faq-answer">
               <p>
-                Beekolpo only requires about 2.5MB of storage for installation.
-                Your edited photos are stored in your device's gallery and can
-                be backed up to cloud storage.
+                Absolutely. Our app covers service providers and customers all
+                over Bangladesh, making it convenient to find and book services
+                anywhere in the country.
               </p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-button">
-              <span>Can I use filters offline?</span>
+              <span>How do I hire a service provider through the app?</span>
               <svg
                 class="faq-icon"
                 width="20"
@@ -394,16 +394,17 @@
             </button>
             <div class="faq-answer">
               <p>
-                All core editing features, including filters and adjustments,
-                work perfectly offline. Cloud backup and sharing features
-                require an internet connection.
+                Simply browse or search for the service you need, review
+                provider profiles and ratings, then book and pay securely within
+                the app. Our advanced features ensure a smooth hiring
+                experience.
               </p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-button">
-              <span>Is my data private and secure?</span>
+              <span>Is the platform secure for online transactions?</span>
               <svg
                 class="faq-icon"
                 width="20"
@@ -423,16 +424,19 @@
             </button>
             <div class="faq-answer">
               <p>
-                Yes, we take privacy seriously. All your photos remain on your
-                device by default. Cloud backup is encrypted end-to-end, and we
-                never share your data with third parties.
+                Yes, we prioritize your security. All payments and data
+                transfers are encrypted, and we work only with verified
+                providers to ensure safe and trustworthy transactions.
               </p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-button">
-              <span>How often are new features added?</span>
+              <span
+                >Can I manage both selling products and offering services on one
+                account?</span
+              >
               <svg
                 class="faq-icon"
                 width="20"
@@ -452,9 +456,9 @@
             </button>
             <div class="faq-answer">
               <p>
-                We release updates bi-weekly with new filters, features, and
-                performance improvements. Users can enable notifications to stay
-                informed about the latest updates.
+                Yes! Our platform allows providers to manage both product sales
+                and service offerings from a single account, simplifying your
+                business operations.
               </p>
             </div>
           </div>
@@ -733,31 +737,33 @@
       const navMenu = document.getElementById("navMenu");
 
       if (navToggle && navMenu) {
-          navToggle.addEventListener("click", () => {
-              navToggle.classList.toggle("active");
-              navMenu.classList.toggle("active");
-              
-              // Prevent body scroll when menu is open
-              document.body.style.overflow = navMenu.classList.contains("active") ? "hidden" : "";
-          });
+        navToggle.addEventListener("click", () => {
+          navToggle.classList.toggle("active");
+          navMenu.classList.toggle("active");
 
-          // Close menu when clicking on a link
-          document.querySelectorAll(".nav-menu a").forEach(link => {
-              link.addEventListener("click", () => {
-                  navToggle.classList.remove("active");
-                  navMenu.classList.remove("active");
-                  document.body.style.overflow = "";
-              });
-          });
+          // Prevent body scroll when menu is open
+          document.body.style.overflow = navMenu.classList.contains("active")
+            ? "hidden"
+            : "";
+        });
 
-          // Close menu when clicking outside
-          document.addEventListener("click", (e) => {
-              if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                  navToggle.classList.remove("active");
-                  navMenu.classList.remove("active");
-                  document.body.style.overflow = "";
-              }
+        // Close menu when clicking on a link
+        document.querySelectorAll(".nav-menu a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navToggle.classList.remove("active");
+            navMenu.classList.remove("active");
+            document.body.style.overflow = "";
           });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            navToggle.classList.remove("active");
+            navMenu.classList.remove("active");
+            document.body.style.overflow = "";
+          }
+        });
       }
 
       // Update navbar scroll behavior to account for mobile menu
@@ -765,17 +771,18 @@
       const navbar = document.querySelector(".navbar");
 
       window.addEventListener("scroll", () => {
-          // Only apply scroll behavior if mobile menu is closed
-          if (!navMenu || !navMenu.classList.contains("active")) {
-              let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        // Only apply scroll behavior if mobile menu is closed
+        if (!navMenu || !navMenu.classList.contains("active")) {
+          let scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
 
-              if (scrollTop > lastScrollTop && scrollTop > 100) {
-                  navbar.style.transform = "translateY(-100%)";
-              } else {
-                  navbar.style.transform = "translateY(0)";
-              }
-              lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+          if (scrollTop > lastScrollTop && scrollTop > 100) {
+            navbar.style.transform = "translateY(-100%)";
+          } else {
+            navbar.style.transform = "translateY(0)";
           }
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }
       });
 
       navbar.style.transition = "transform 0.3s ease";
